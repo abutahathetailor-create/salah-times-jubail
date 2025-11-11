@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#1a5e63">
-    <link rel="apple-touch-icon" href="icon-192.png">
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salah Times - Jubail</title>
@@ -24,11 +20,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 10px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 500px;
             width: 100%;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -39,18 +35,18 @@
 
         .header {
             background: rgba(0, 0, 0, 0.3);
-            padding: 25px;
+            padding: 15px 20px;
             text-align: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .header h1 i {
@@ -58,13 +54,13 @@
         }
 
         .date-display {
-            font-size: 1.3rem;
+            font-size: 1rem;
             color: #b0e6ff;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .hijri-date {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             color: #ffd54f;
         }
 
@@ -72,9 +68,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-            font-size: 1.2rem;
+            gap: 8px;
+            margin-top: 8px;
+            font-size: 1rem;
         }
 
         .location i {
@@ -82,44 +78,68 @@
         }
 
         .content {
-            padding: 25px;
+            padding: 15px 20px;
         }
 
         .current-time {
             text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
             background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 15px;
+            padding: 12px;
+            border-radius: 12px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .current-time i {
             color: #4CAF50;
         }
 
+        .countdown {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .countdown-title {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #FF9800;
+        }
+
+        .countdown-timer {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #4CAF50;
+        }
+
         .prayer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 15px;
         }
 
         .prayer-card {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 15px 12px;
             text-align: center;
             transition: transform 0.3s ease, background 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .prayer-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             background: rgba(255, 255, 255, 0.15);
         }
 
@@ -136,17 +156,17 @@
         }
 
         .prayer-name {
-            font-size: 1.3rem;
+            font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 6px;
         }
 
         .prayer-time {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: #b0e6ff;
         }
@@ -159,66 +179,47 @@
             color: #FF9800;
         }
 
-        .countdown {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .countdown-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #FF9800;
-        }
-
-        .countdown-timer {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #4CAF50;
-        }
-
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 12px 20px;
             background: rgba(0, 0, 0, 0.3);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #aaa;
         }
 
         .loading {
             text-align: center;
-            padding: 40px;
-            font-size: 1.2rem;
+            padding: 30px;
+            font-size: 1rem;
         }
 
         .loading i {
-            font-size: 2rem;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
             color: #4CAF50;
         }
 
         .error-message {
             background: rgba(244, 67, 54, 0.2);
             border: 1px solid rgba(244, 67, 54, 0.5);
-            border-radius: 10px;
-            padding: 15px;
+            border-radius: 8px;
+            padding: 12px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #ffcdd2;
+            font-size: 0.9rem;
         }
 
         .retry-button {
             background: #4CAF50;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
-            margin-top: 10px;
+            font-size: 0.9rem;
+            margin-top: 8px;
             transition: background 0.3s;
         }
 
@@ -226,17 +227,44 @@
             background: #45a049;
         }
 
-        @media (max-width: 600px) {
+        /* Ensure no scrolling */
+        html, body {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        @media (max-width: 400px) {
             .header h1 {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             
             .prayer-grid {
                 grid-template-columns: 1fr;
+                gap: 10px;
             }
             
             .current-time {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
+            }
+            
+            .countdown-timer {
+                font-size: 1.4rem;
+            }
+            
+            .prayer-time {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-height: 700px) {
+            .container {
+                transform: scale(0.9);
+            }
+        }
+
+        @media (max-height: 600px) {
+            .container {
+                transform: scale(0.8);
             }
         }
     </style>
@@ -405,7 +433,6 @@
             const day = today.getDate();
             
             // Sample prayer times for Jubail (you can adjust these as needed)
-            // These are approximate times and should be verified
             let times;
             
             if (month >= 3 && month <= 5) { // Spring
@@ -655,5 +682,4 @@
         window.onload = initApp;
     </script>
 </body>
-
 </html>
